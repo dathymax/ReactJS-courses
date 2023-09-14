@@ -1,8 +1,11 @@
+import { Route, Routes } from "react-router-dom"
+import Layout from "./layout"
+
 function App() {
     return (
-        <>
-            Hello world!
-        </>
+        <Routes>
+            <Route index path="/" element={<Layout />} />
+        </Routes>
     )
 }
 

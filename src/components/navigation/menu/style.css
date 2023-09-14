@@ -1,0 +1,12 @@
+.menu__item {
+	position: relative;
+}
+
+.menu__item::after {
+	position: absolute;
+	content: "";
+	height: 100%;
+	width: 4px;
+	right: 0;
+	background-color: rgb(180, 180, 245);
+}
