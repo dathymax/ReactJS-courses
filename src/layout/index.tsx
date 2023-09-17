@@ -1,11 +1,12 @@
 import React from 'react'
 import LayoutSidebar from './sidebar'
 import LayoutContent from './content'
+import LayoutHeader from './header'
 
 const Layout = () => {
     return (
         <main
-            className='flex items-center justify-center'
+            className='flex'
             style={{
                 height: "100vh",
                 maxHeight: "100vh",
@@ -14,7 +15,10 @@ const Layout = () => {
             }}
         >
             <LayoutSidebar />
-            <LayoutContent />
+            <div>
+                <LayoutHeader />
+                <LayoutContent />
+            </div>
         </main>
     )
 }

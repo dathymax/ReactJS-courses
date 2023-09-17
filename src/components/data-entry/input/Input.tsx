@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { FC } from 'react'
 
-const Input = () => {
+interface InputProps {
+    prefix?: React.ReactNode,
+    suffix?: React.ReactNode,
+    width?: number | string
+}
+
+const Input: FC<InputProps> = ({ prefix, suffix, width = 300 }) => {
     return (
-        <input type="text" className='px-2 py-3 rounded-lg bg-gray text-[16px]' />
+        <div className='flex items-center gap-2 p-2 rounded-[100px] bg-gray-200 text-[16px]' style={{ width: width }}>
+            {prefix}
+            <input type="text" className='w-[85%] outline-none bg-transparent' />
+            {suffix}
+        </div>
     )
 }
 

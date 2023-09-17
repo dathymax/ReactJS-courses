@@ -6,7 +6,8 @@ const LayoutContent = () => {
             style={{
                 width: "calc(100vw - 200px)",
                 maxWidth: "calc(100vw - 200px)",
-                height: "100%"
+                height: "calc(100vh - 60px)",
+                maxHeight: "calc(100vh - 60px)",
             }}
         >
             LayoutContent
