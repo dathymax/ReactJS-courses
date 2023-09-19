@@ -1,8 +1,8 @@
-.menu__item {
+.menu__item-active {
 	position: relative;
 }
 
-.menu__item::after {
+.menu__item-active::after {
 	position: absolute;
 	content: "";
 	height: 100%;

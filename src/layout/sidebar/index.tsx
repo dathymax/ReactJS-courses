@@ -11,7 +11,7 @@ const LayoutSidebar = () => {
             }}
             className='border-r border-gray-300'
         >
-            <Menu />
+            <Menu defaultActive={1} />
         </aside>
     )
 }

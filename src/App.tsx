@@ -5,6 +5,8 @@ function App() {
     return (
         <Routes>
             <Route index path="/" element={<Layout />} />
+            <Route index path="/browse-courses" element={<Layout />} />
+            <Route index path="/browse-courses-2" element={<Layout />} />
         </Routes>
     )
 }
