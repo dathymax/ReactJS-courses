@@ -5,12 +5,12 @@ import "./style.css"
 import { useNavigate } from 'react-router-dom'
 
 interface MenuProps {
-    defaultActive?: number
+    defaultActive?: string
 }
 
 const Menu: FC<MenuProps> = ({ defaultActive }) => {
     const navigate = useNavigate();
-    const [active, setActive] = useState<number | undefined>(0);
+    const [active, setActive] = useState<string | undefined>("/browse-courses");
 
     useEffect(() => {
         setActive(defaultActive);
@@ -29,9 +29,9 @@ const Menu: FC<MenuProps> = ({ defaultActive }) => {
         },
     ]
 
-    const onClick = (key?: string, index?: number) => {
+    const onClick = (key?: string) => {
         navigate(key || "/");
-        setActive(index)
+        setActive(key)
     }
 
     return (
@@ -39,8 +39,8 @@ const Menu: FC<MenuProps> = ({ defaultActive }) => {
             {MENU.map((menuItem, index) => {
                 return (
                     <li
-                        className={`${active === index && "bg-blue-100 menu__item-active text-blue-800 font-medium"} transition-all flex items-center gap-3 p-3 cursor-pointer select-none hover:bg-blue-100`}
-                        onClick={() => onClick(menuItem?.key, index)}
+                        className={`${active === menuItem.key && "bg-blue-100 menu__item-active text-blue-800 font-medium"} transition-all flex items-center gap-3 p-3 cursor-pointer select-none hover:bg-blue-100`}
+                        onClick={() => onClick(menuItem?.key)}
                     >
                         {menuItem?.icon}
                         {menuItem?.label}

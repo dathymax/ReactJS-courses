@@ -11,7 +11,7 @@ const LayoutSidebar = () => {
             }}
             className='border-r border-gray-300'
         >
-            <Menu defaultActive={1} />
+            <Menu defaultActive={"/browse-courses"} />
         </aside>
     )
 }
